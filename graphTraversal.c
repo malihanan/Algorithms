@@ -66,13 +66,7 @@ void mark(int n, int mat[][MAX])
 	int i, j;
 	for(i=0; i<MAX; i++)
 	{
-		for(j=0; j<MAX; j++)
-		{
-			if(j==n && mat[i][j]==1)
-			{
-				mat[i][j]=999;
-			}
-		}
+		mat[i][n]=999;
 	}
 }
 
