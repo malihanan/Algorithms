@@ -27,32 +27,24 @@ int main()
 
 void dfs(int mat[][MAX], int s[], int *top)
 {
-	int i=0, j, flag;
+	int i=0, j;
 	
-	printf("%d ", i);
 	push(i, s, top);
 	mark(i, mat);
 	
 	while((*top) != -1)
 	{
-		flag=0;
+		i = pop(s, top);
+		printf("%d ", i);
 	
 		for(j=0; j<MAX; j++)
 		{
 			if(mat[i][j]==1)
 			{
-				printf("%d ", j);
 				push(j, s, top);
 				mark(j, mat);
-				flag=1;
-				break;
 			}
 		}
-		
-		if(flag==1)
-			i=j;
-		else
-			i=pop(s, top);
 	}
 	
 }
