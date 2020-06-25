@@ -21,7 +21,7 @@ int main()
 void bubbleSort(int a[])
 {
 	int pass, j, temp, comp=0, swap=0, counter=MAX;
-	for(pass=0; pass<MAX; pass++)
+	for(pass=0; pass<MAX-1; pass++)
 	{
 		for(j=1; j<counter; j++)
 		{
